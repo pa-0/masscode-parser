@@ -38,10 +38,10 @@ mass-code-parser <path-to-db.json> [flags]
 
 ### Example
 
-To parse a MassCode database file located at `/path/to/db.json` and export the results as an TXT file:
+To parse a MassCode database file located at `/path/to/db.json` and export the results as an HTML file:
 
 ```bash
-mass-code-parser /path/to/db.json --output --output-path="/path/to/output" --output-type="txt"
+mass-code-parser /path/to/db.json --output --output-path="/path/to/output" --output-type="html"
 ```
 
 ### Flags
@@ -53,7 +53,7 @@ mass-code-parser /path/to/db.json --output --output-path="/path/to/output" --out
 ### Command-Line Options
 
 - **`-o, --output`**: If provided, the output will be saved to a file instead of printed to the console.
-- **`-p, --output-path`**: Path for the output file (without extension). If not specified, defaults to `masscode_export`.
+- **`-p, --output-path`**: Path for the output file (without extension). If not specified, defaults to `mass_code_export`.
 - **`-t, --output-type`**: Specifies the output format. Valid options are:
   - `text`: Export as a plain text file.
   - `html`: Export as an HTML file.
