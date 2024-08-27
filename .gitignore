@@ -1,0 +1,18 @@
+# Exclude everything
+*
+
+# Allow the .gitignore itself to be tracked
+!.gitignore
+
+# Include the .vscode directory and its contents
+!.vscode/
+!.vscode/**
+!makefiles/
+!makefiles/**
+!.github/
+!.github/**
+
+# (Optionally) Include any other specific files you want
+!README.md
+!LICENSE
+!generate_config.sh

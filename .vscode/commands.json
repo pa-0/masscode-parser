@@ -1,0 +1,34 @@
+{
+  "commands": [
+    {
+      "command": "commands.refresh",
+      "text": "$(sync)",
+      "tooltip": "Refresh commands",
+      "color": "#FFCC00"
+    },
+    {
+      "command": "todo.toggleBox",
+      "text": "$(circle-large-outline)",
+      "tooltip": "Todo: Box",
+      "color": "#f70606"
+    },
+    {
+      "command": "todo.toggleDone",
+      "text": "$(check)",
+      "tooltip": "Todo: Done",
+      "color": "#06f712"
+    },
+    {
+      "text": "$(markdown)",
+      "command": "markdown.showPreviewToSide",
+      "tooltip": "Open markdown preview",
+      "filterFileRegex": ".*\\.md"
+    },
+    {
+      "text": "</>",
+      "command": "html.showLockedPreviewToSide",
+      "tooltip": "Open html preview",
+      "filterFileRegex": ".*\\.htm*"
+    }
+  ]
+}
