@@ -1,3 +1,5 @@
+[![testing](https://github.com/ondrovic/mass-code-parser/actions/workflows/testing.yml/badge.svg)](https://github.com/ondrovic/mass-code-parser/actions/workflows/testing.yml)
+[![releaser](https://github.com/ondrovic/mass-code-parser/actions/workflows/releaser.yml/badge.svg)](https://github.com/ondrovic/mass-code-parser/actions/workflows/releaser.yml)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 # MassCode Parser
