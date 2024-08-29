@@ -14,18 +14,19 @@ import (
 
 var (
 	version string
-	
-	rootCmd = &cobra.Command{
-		Use:   "mass-code-parser <path-to-db.json> [flags]",
-		Short: "Parse and export MassCode database",
-		Long:  `A tool to parse and export MassCode database in various formats.`,
-		Args:  cobra.ExactArgs(1),
-		RunE:  run,
-		Version: formatters.GetVersion(version, "0.0.0-local-dev"),
-	}
+	rootCmd *cobra.Command
 )
 
 func init() {
+	rootCmd = &cobra.Command{
+		Use:     "mass-code-parser <path-to-db.json> [flags]",
+		Short:   "Parse and export MassCode database",
+		Long:    `A tool to parse and export MassCode database in various formats.`,
+		Args:    cobra.ExactArgs(1),
+		RunE:    run,
+		Version: version,
+	}
+
 	rootCmd.Flags().BoolP("output", "o", false, "Export results to a file")
 	rootCmd.Flags().StringP("output-path", "p", "", "Path for the output file (without extension)")
 	rootCmd.Flags().StringP("output-type", "t", "html", "Output type: text, html, or json")

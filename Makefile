@@ -1,7 +1,7 @@
 export GO111MODULE=on
 GOOS := $(shell go env GOOS)
 VERSION := $(shell git describe --tags --always)
-BUILD_FLAGS := -ldflags="-X 'main.version=$(VERSION)'"
+BUILD_FLAGS := -ldflags="-X 'masscode-parser/cli/cmd.version=$(VERSION)'"
 # update to main app path
 APP_PATH := .\mass-code-parser.go
 
