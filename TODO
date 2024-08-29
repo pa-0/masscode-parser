@@ -1,4 +1,5 @@
 project:
+  ✔ add version info @done(24-08-29 15:31)
   goreleaser.yaml:
     project_name:
       ✔ replace PLACEHOLDER with actual name @done(24-08-27 12:44)
@@ -11,4 +12,4 @@ project:
     ☐ write tests
   .github:
     workflows:
-      ☐ verify everythign is setup
+      ✔ verify everythign is setup @done(24-08-29 15:25)

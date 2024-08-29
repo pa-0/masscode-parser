@@ -45,6 +45,7 @@ To parse a MassCode database file located at `/path/to/db.json` and export the r
 ```bash
 mass-code-parser /path/to/db.json --output --output-path="/path/to/output" --output-type="html"
 ```
+![html output example](assets/images/html_output.png)
 
 ### Flags
 

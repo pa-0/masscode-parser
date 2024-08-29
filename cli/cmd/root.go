@@ -12,26 +12,30 @@ import (
 	"github.com/spf13/viper"
 )
 
-var rootCmd = &cobra.Command{
-	Use:   "mass-code-parser <path-to-db.json> [flags]",
-	Short: "Parse and export MassCode database",
-	Long:  `A tool to parse and export MassCode database in various formats.`,
-	Args:  cobra.ExactArgs(1),
-	RunE:  run,
-}
+var (
+	version string
+	
+	rootCmd = &cobra.Command{
+		Use:   "mass-code-parser <path-to-db.json> [flags]",
+		Short: "Parse and export MassCode database",
+		Long:  `A tool to parse and export MassCode database in various formats.`,
+		Args:  cobra.ExactArgs(1),
+		RunE:  run,
+		Version: formatters.GetVersion(version, "0.0.0-local-dev"),
+	}
+)
 
 func init() {
 	rootCmd.Flags().BoolP("output", "o", false, "Export results to a file")
 	rootCmd.Flags().StringP("output-path", "p", "", "Path for the output file (without extension)")
-	rootCmd.Flags().StringP("output-type", "t", "txt", "Output type: text, html, or json")
+	rootCmd.Flags().StringP("output-type", "t", "html", "Output type: text, html, or json")
 
 	viper.BindPFlags(rootCmd.Flags())
 }
 
 func Execute() {
 	if err := rootCmd.Execute(); err != nil {
-		// fmt.Println(err)
-		// os.Exit(1)
+		fmt.Println(err)
 		return
 	}
 }
