@@ -4,6 +4,7 @@ project_name: mass-code-parser # rename
 
 env:
  - GO_MAIN_PATH=mass-code-parser.go
+ - VERSION_PATH=masscode-parser/cli/cmd.version
 
 before:
   hooks:
@@ -21,7 +22,9 @@ builds:
       - windows
     goarch:
       - amd64
-    ldflags: -s -w
+    ldflags:
+      - -s -w
+      - -X '{{.Env.VERSION_PATH}}={{.Tag}}'
 
   - id: linux
     main: '{{ .Env.GO_MAIN_PATH }}'
@@ -31,7 +34,9 @@ builds:
       - linux
     goarch:
       - amd64
-    ldflags: -s -w
+    ldflags:
+      - -s -w
+      - -X '{{.Env.VERSION_PATH}}={{.Tag}}'
 
   - id: macos
     main: '{{ .Env.GO_MAIN_PATH }}'
@@ -41,7 +46,9 @@ builds:
       - darwin
     goarch:
       - amd64
-    ldflags: -s -w
+    ldflags:
+      - -s -w
+      - -X '{{.Env.VERSION_PATH}}={{.Tag}}'
 
 archives:
   - format: tar.gz
