@@ -1,8 +1,8 @@
+# MassCode Parser
+
 [![testing](https://github.com/ondrovic/mass-code-parser/actions/workflows/testing.yml/badge.svg)](https://github.com/ondrovic/mass-code-parser/actions/workflows/testing.yml)
 [![releaser](https://github.com/ondrovic/mass-code-parser/actions/workflows/releaser.yml/badge.svg)](https://github.com/ondrovic/mass-code-parser/actions/workflows/releaser.yml)
 ![License](https://img.shields.io/badge/license-MIT-blue)
-
-# MassCode Parser
 
 `mass-code-parser` is a command-line tool for parsing and exporting MassCode database files into various formats. This tool allows users to convert their MassCode database into text, HTML, or JSON files.
 
@@ -20,14 +20,19 @@
 ## Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/ondrovic/mass-code-parser.git
    ```
+
 2. Navigate to the project directory:
+
    ```bash
    cd mass-code-parser
    ```
+
 3. Build the project:
+
    ```bash
    go build -o mass-code-parser ./cmd
    ```
@@ -45,6 +50,7 @@ To parse a MassCode database file located at `/path/to/db.json` and export the r
 ```bash
 mass-code-parser /path/to/db.json --output --output-path="/path/to/output" --output-type="html"
 ```
+
 ![html output example](assets/images/html_output.png)
 
 ### Flags
